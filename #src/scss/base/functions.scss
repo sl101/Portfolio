@@ -1,0 +1,6 @@
+@use "sass:math";
+
+//  оносительніе величины ===================================
+@function vw($value, $base: 1440) {
+	@return calc($value / $base * 100vw);
+}

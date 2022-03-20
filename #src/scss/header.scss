@@ -1,0 +1,191 @@
+.header {
+	// position: fixed;
+	position: relative;
+	z-index: 50;
+	// top: 0;
+	width: 100%;
+	min-height: 75px;
+
+	&::before {
+		content: "";
+		position: absolute;
+		width: 100%;
+		height: 100%;
+		background-color: $mainColor;
+
+		@include lg {
+			z-index: 2;
+		}
+	}
+
+	@include sm {
+		min-height: 100px;
+	}
+
+	// .header__content
+	&__content {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		min-height: 75px;
+
+		@include sm {
+			min-height: 100px;
+			align-items: flex-end;
+			padding: 0 0 20px 0;
+		}
+	}
+
+	// .header__logo
+	&__logo {
+		font-family: Montserrat, sans-serif;
+		font-weight: 500;
+		font-size: 24px;
+		position: relative;
+		z-index: 5;
+		display: inline-block;
+		text-transform: uppercase;
+
+		@include sm {
+			font-size: 20px;
+		}
+	}
+}
+
+.logo {
+	max-width: 50px;
+	width: 100%;
+	min-height: 50px;
+	border-radius: 100%;
+	background-color: $white;
+	color: $brandColor;
+	transition: all $doubleHoverTime ease;
+
+	&__name {
+		position: absolute;
+		top: 50%;
+		transform: translateY(-50%);
+		transition: all $doubleHoverTime ease;
+		&--first {
+			left: 10px;
+		}
+		&--second {
+			right: 10px;
+		}
+	}
+
+	@include lg-min {
+		&:hover {
+			background-color: $brandColor;
+
+			& .logo__name {
+				color: $white;
+			}
+		}
+
+		&:active {
+		}
+
+		&:focus {
+		}
+	}
+}
+
+//menu
+.menu {
+	margin: 0 20px 0 0;
+
+	@include lg {
+		margin: 0;
+	}
+
+	@include md {
+		width: 100%;
+		display: flex;
+		justify-content: flex-end;
+		align-items: center;
+	}
+
+	// .menu__body
+	&__body {
+		font-family: Roboto, sans-serif;
+		position: relative;
+		z-index: 1;
+		width: 100%;
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		transition: all $doubleHoverTime ease-out;
+
+		@include lg {
+			position: fixed;
+			top: 0;
+			left: 0;
+			flex-direction: column;
+			width: 100%;
+			height: 100%;
+			overflow: auto;
+			transform: translate(-100%, 0);
+			background-color: $mainColor;
+			padding: 150px 20px 130px;
+		}
+
+		&.active {
+			transform: translate(0, 0);
+		}
+	}
+
+	// .menu__list
+	&__list {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+
+		@include lg {
+			flex-direction: column;
+			align-items: start;
+			margin: 0 0 50px;
+		}
+	}
+
+	// .menu__item
+	&__item {
+		flex: 0 0 auto;
+
+		&:not(:last-child) {
+			margin: 0 30px 0 0;
+		}
+
+		@include lg {
+			&:not(:last-child) {
+				margin: 0 0 30px 0;
+			}
+		}
+	}
+
+	&__link,
+	&__phone {
+		font-weight: 300;
+		padding: 0 0 3px 0;
+		color: $white;
+		font-size: 16px;
+
+		@include lg {
+			font-size: 32px;
+		}
+	}
+
+	// .menu__phone
+	&__phone {
+		position: relative;
+		z-index: 1;
+		order: 2;
+		flex: 0 0 auto;
+		display: inline-block;
+		font-family: Roboto, sans-serif;
+
+		@include sm {
+			font-size: 26px;
+		}
+	}
+}
