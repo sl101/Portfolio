@@ -201,14 +201,14 @@ body {
     top: auto;
     bottom: 0px;
   }
-  .burger._active span {
+  .burger.active span {
     transform: scale(0);
   }
-  .burger._active span:first-child {
+  .burger.active span:first-child {
     transform: rotate(-45deg);
     top: calc(50% - 1px);
   }
-  .burger._active span:last-child {
+  .burger.active span:last-child {
     transform: rotate(45deg);
     bottom: calc(50% - 1px);
   }
@@ -316,6 +316,14 @@ body {
   fill: #fff;
   cursor: pointer;
   transition: all 0.4s ease-in;
+}
+
+.main-slider__wrapper {
+  display: flex;
+  flex-direction: column;
+}
+.main-slider__slide {
+  height: 100vh;
 }
 
 .header {
@@ -528,7 +536,7 @@ body {
   display: block;
 }
 .hero__item--name, .hero__item--secondName {
-  font-weight: 700;
+  font-weight: 500;
   font-size: 72px;
   letter-spacing: 8px;
   text-transform: uppercase;
@@ -548,6 +556,11 @@ body {
   background-color: #45948e;
 }
 
+.about {
+  max-width: 100%;
+  min-height: 100vh;
+}
+
 .portfolio {
   max-width: 100%;
   min-height: 100vh;
@@ -557,7 +570,9 @@ body {
 .contacts {
   max-width: 100%;
   min-height: 100vh;
-  background-color: salmon;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
 }
 
 .popup {

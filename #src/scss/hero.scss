@@ -1,11 +1,9 @@
 .hero {
 	position: relative;
-	// background-color: $brandColor;
 	max-width: 100%;
 	min-height: 100vh;
 	padding: 80px 0 0 0;
 	margin: -75px 0 0 0;
-	// color: $white;
 	@include bg-cover;
 	background-position: right center;
 
@@ -45,7 +43,7 @@
 
 		&--name,
 		&--secondName {
-			font-weight: 700;
+			font-weight: 500;
 			font-size: 72px;
 			letter-spacing: 8px;
 			text-transform: uppercase;

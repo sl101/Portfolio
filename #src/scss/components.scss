@@ -117,11 +117,11 @@
 .main-slider {
 	// overflow: hidden;
 	&__wrapper {
-		// display: flex;
-		// flex-direction: column;
+		display: flex;
+		flex-direction: column;
 	}
 
 	&__slide {
-		// height: 100vh;
+		height: 100vh;
 	}
 }
