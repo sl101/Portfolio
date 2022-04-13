@@ -1,38 +1,49 @@
 .hero {
-	position: relative;
 	max-width: 100%;
-	min-height: 100vh;
 	padding: 80px 0 0 0;
 	margin: -75px 0 0 0;
-	@include bg-cover;
-	background-position: right center;
+	background-color: $mainColor;
 
-	&:before {
-		content: "";
-		position: absolute;
-		z-index: 1;
-		top: 0;
-		left: 0;
-		width: 100%;
-		height: 100%;
-		background-color: $mainColor-80;
+	&__inner {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		min-height: 100vh;
+
+		@include xl {
+			flex-direction: column;
+			justify-content: center;
+			padding: 100px 0;
+			min-height: 100%;
+		}
+
+		@include lg {
+			padding: 50px 0;
+		}
 	}
 
 	// .hero__content
-
 	&__content {
 		position: relative;
 		z-index: 2;
 		max-width: 50%;
-		height: 100vh;
 		display: flex;
 		flex-direction: column;
 		justify-content: center;
+
+		@include xl {
+			max-width: 80%;
+		}
+
+		@include md {
+			margin-bottom: 50px;
+		}
 	}
 
 	// .hero__title
 
-	&__title {
+	&__title,
+	.hero__item--subtitle {
 		color: $white;
 		margin: 0 0 50px 0;
 	}
@@ -44,22 +55,33 @@
 		&--name,
 		&--secondName {
 			font-weight: 500;
-			font-size: 72px;
-			letter-spacing: 8px;
-			text-transform: uppercase;
-		}
+			font-size: 64px;
 
-		&--name {
+			@include md {
+				font-size: 38px;
+			}
+
+			@include sm {
+				font-size: 24px;
+			}
 		}
 
 		&--subtitle {
-			font-size: 52px;
-			margin-top: 30px;
+			font-size: 24px;
+			line-height: 1.3;
+			letter-spacing: 1.3px;
+
+			@include md {
+				font-size: 18px;
+			}
+
+			@include sm {
+				font-size: 14px;
+			}
 		}
 	}
 
 	// .hero__button
-
 	&__button {
 		width: 150px;
 		height: 150px;
@@ -68,18 +90,38 @@
 		border: 0;
 		font-size: 24px;
 		font-weight: 700;
-		background-color: $lightBrand;
+		background-color: $conceptColor;
+
+		@include md {
+			flex: 0 0 120px;
+			width: 120px;
+			height: 120px;
+			font-size: 18px;
+		}
 	}
-}
 
-.title-hero {
-	// .title-hero__greate
+	&__person {
+		position: relative;
+		max-width: 560px;
+		width: 100%;
+		background-color: $mainColor;
+		border-radius: 100%;
+		box-shadow: 0 0 10px 10px $black-25;
 
-	&__greate {
+		&:before {
+			content: "";
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			border-radius: 100%;
+			background-color: $mainColor-20;
+		}
 	}
 
-	// .title-hero__subtitle
-
-	&__subtitle {
+	&__img {
+		border-radius: 100%;
+		width: 100%;
 	}
 }

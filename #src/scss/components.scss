@@ -55,13 +55,13 @@
 
 	@include lg-min {
 		&:focus {
-			border-color: $mainColor;
+			background-color: $background-color;
 		}
 
 		&:hover {
-			color: $white;
-			border-color: $mainColor;
-			background-color: $mainColor;
+			color: $conceptColor;
+			border-color: $white;
+			background-color: $white;
 		}
 
 		&:active {
@@ -115,7 +115,6 @@
 }
 // ==============================================
 .main-slider {
-	// overflow: hidden;
 	&__wrapper {
 		display: flex;
 		flex-direction: column;
