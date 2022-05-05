@@ -7,24 +7,13 @@
 <body>
 	<div class="wrapper">
 		@@include('html/_header.html', {})
-		<main class="page main-slider">
-			<ul class="main-slider__wrapper">
-				<li class="main-slider__slide">
-					@@include('html/hero.html', {})
-				</li>
+		<main class="page">
 
-				<li class="main-slider__slide">
-					@@include('html/about.html', {})
-				</li>
+			@@include('html/hero.html', {})
+			@@include('html/about.html', {})
+			@@include('html/portfolio.html', {})
+			@@include('html/contacts.html', {})
 
-				<li class="main-slider__slide">
-					@@include('html/portfolio.html', {})
-				</li>
-
-				<li class="main-slider__slide">
-					@@include('html/contacts.html', {})
-				</li>
-			</ul>
 		</main>
 		@@include('html/_footer.html', {})
 	</div>

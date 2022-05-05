@@ -7,15 +7,17 @@
 
 	@include lg-min {
 		&:focus {
-			border-bottom: 1px solid $brandColor;
+			border-bottom: 1px solid $conceptColor;
 		}
 
 		&:hover {
-			border-bottom: 1px solid $white;
+			border-bottom: 1px solid transparent;
+			color: $conceptColor;
 		}
 
 		&:active {
-			border-bottom: 1px solid $black;
+			border-bottom: 1px solid $conceptColor;
+			color: $conceptColor;
 		}
 	}
 }
