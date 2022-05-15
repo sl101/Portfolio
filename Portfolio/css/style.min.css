@@ -242,6 +242,9 @@ body {
 
 .title {
   font-size: 24px;
+  display: inline-block;
+  padding: 0 5px 5px;
+  border-bottom: 1px solid #fd4e16;
 }
 @media only screen and (max-width: 991.98px) {
   .title {
@@ -637,8 +640,81 @@ body {
 }
 
 .about {
+  position: relative;
   max-width: 100%;
   min-height: 100vh;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  padding: 50px 0;
+}
+.about::before {
+  content: "";
+  position: absolute;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(9, 41, 48, 0.8);
+}
+.about__content {
+  position: relative;
+  z-index: 2;
+  color: #fff;
+}
+.about__top {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 50px;
+}
+.about__title {
+  margin-bottom: 40px;
+  align-self: start;
+}
+.about__description {
+  max-width: 70%;
+  padding: 10px 30px;
+  border: 1px solid #fd4e16;
+  border-top-left-radius: 25px;
+  border-bottom-right-radius: 25px;
+}
+.about__advantages {
+  display: flex;
+  justify-content: space-between;
+}
+
+.item-about {
+  max-width: 300px;
+  padding: 10px 7px;
+  text-align: center;
+}
+.item-about__title {
+  font-size: 22px;
+}
+.item-about__picture {
+  position: relative;
+  z-index: 1;
+  width: 80px;
+  height: 80px;
+  margin: 20px auto;
+}
+.item-about__picture:after {
+  content: "";
+  position: absolute;
+  z-index: 2;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+.item-about__icon {
+  width: 100%;
+  height: 100%;
+  fill: #092930;
+}
+.item-about__description {
+  text-align: left;
 }
 
 .portfolio {
