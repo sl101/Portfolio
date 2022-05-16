@@ -204,3 +204,20 @@
 		}
 	}
 }
+
+.phone-menu {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	// .phone-menu__icon
+	&__icon {
+		width: 27px;
+		height: 27px;
+		fill: currentColor;
+	}
+
+	// .phone-menu__number
+	&__number {
+		margin-left: 10px;
+	}
+}

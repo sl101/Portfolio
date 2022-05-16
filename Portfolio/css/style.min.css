@@ -503,6 +503,20 @@ body {
   }
 }
 
+.phone-menu {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.phone-menu__icon {
+  width: 27px;
+  height: 27px;
+  fill: currentColor;
+}
+.phone-menu__number {
+  margin-left: 10px;
+}
+
 .hero {
   max-width: 100%;
   padding: 100px 0 0 0;
