@@ -28,27 +28,49 @@
 		display: flex;
 		justify-content: space-between;
 		margin-bottom: 50px;
+
+		@include lg {
+			flex-direction: column;
+		}
 	}
 
 	// .about__title
 	&__title {
 		margin-bottom: 40px;
 		align-self: start;
+
+		@include md {
+			align-self: center;
+		}
 	}
 
 	// .about__description
 	&__description {
-		max-width: 70%;
+		max-width: 780px;
 		padding: 10px 30px;
 		border: 1px solid $conceptColor;
 		border-top-left-radius: 25px;
 		border-bottom-right-radius: 25px;
+		font-size: 16px;
+
+		@include lg {
+			align-self: center;
+		}
+
+		@include sm {
+			text-align: center;
+		}
 	}
 
 	// .about__advantages
 	&__advantages {
 		display: flex;
 		justify-content: space-between;
+
+		@include lg {
+			flex-direction: column;
+			align-items: center;
+		}
 	}
 }
 
@@ -56,6 +78,12 @@
 	max-width: 300px;
 	padding: 10px 7px;
 	text-align: center;
+
+	@include lg {
+		&:not(:last-child) {
+			margin-bottom: 40px;
+		}
+	}
 
 	&__title {
 		font-size: 22px;
@@ -87,5 +115,9 @@
 
 	&__description {
 		text-align: left;
+
+		@include sm {
+			text-align: center;
+		}
 	}
 }
