@@ -27,21 +27,6 @@
 	display: inline-block;
 	padding: 0 5px 5px;
 	border-bottom: 1px solid $conceptColor;
-
-	@include xl {
-	}
-
-	@include lg {
-		text-align: center;
-	}
-
-	@include md {
-		font-size: 20px;
-	}
-
-	@include sm {
-		font-size: 18px;
-	}
 }
 
 // ==========================================

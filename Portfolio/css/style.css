@@ -246,21 +246,6 @@ body {
   padding: 0 5px 5px;
   border-bottom: 1px solid #fd4e16;
 }
-@media only screen and (max-width: 991.98px) {
-  .title {
-    text-align: center;
-  }
-}
-@media only screen and (max-width: 767.98px) {
-  .title {
-    font-size: 20px;
-  }
-}
-@media only screen and (max-width: 479.98px) {
-  .title {
-    font-size: 18px;
-  }
-}
 
 .btn {
   font-family: Roboto;
@@ -764,6 +749,7 @@ body {
   position: relative;
   max-width: 100%;
   min-height: 100vh;
+  padding: 46px 0 143px;
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
@@ -777,6 +763,90 @@ body {
   width: 100%;
   height: 100%;
   background-color: rgba(9, 41, 48, 0.8);
+}
+.contacts__top {
+  width: 100%;
+}
+@media only screen and (max-width: 767.98px) {
+  .contacts__top {
+    text-align: center;
+  }
+}
+.contacts__title {
+  color: #fff;
+  margin: 0 0 40px 0;
+}
+.contacts__content {
+  max-width: 522px;
+}
+@media only screen and (max-width: 767.98px) {
+  .contacts__content {
+    margin: 0 auto;
+  }
+}
+.contacts__title, .contacts__content, .contacts__message {
+  position: relative;
+  z-index: 2;
+}
+.contacts__message {
+  max-width: 100%;
+  color: #fff;
+  font-size: 18px;
+  margin-bottom: 40px;
+}
+@media only screen and (max-width: 767.98px) {
+  .contacts__message {
+    text-align: center;
+  }
+}
+
+.form {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+.form__input {
+  display: block;
+  width: 100%;
+  outline: none;
+  border-radius: 10px;
+  border: none;
+  padding: 12px 30px 11px;
+  margin: 0 0 20px 0;
+  caret-color: rgba(9, 41, 48, 0.4);
+  transition: all 0.4s ease;
+}
+.form__input::placeholder {
+  color: rgba(9, 41, 48, 0.2);
+  transition: all 0.4s ease;
+}
+@media only screen and (min-width: 991.98px) {
+  .form__input:focus::placeholder {
+    color: rgba(9, 41, 48, 0.4);
+  }
+  .form__input:hover::placeholder {
+    color: #092930;
+  }
+}
+.form__input--text {
+  min-height: 180px;
+  margin: 0 0 30px 0;
+  resize: none;
+}
+.form__button {
+  width: 100%;
+  max-width: 305px;
+  color: #fff;
+}
+@media only screen and (max-width: 767.98px) {
+  .form__button {
+    align-self: center;
+  }
+}
+@media only screen and (max-width: 479.98px) {
+  .form__button {
+    max-width: 100%;
+  }
 }
 
 .popup {
