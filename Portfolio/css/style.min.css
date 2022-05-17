@@ -281,41 +281,6 @@ body {
   border-color: #092930;
 }
 
-.social-media {
-  flex: 0 0 170px;
-  display: flex;
-  justify-content: space-between;
-}
-.social-media__link {
-  outline: none;
-}
-@media only screen and (min-width: 991.98px) {
-  .social-media__link:focus .social-media__icon {
-    fill: rgba(9, 41, 48, 0.2);
-  }
-  .social-media__link:hover .social-media__icon {
-    fill: #092930;
-  }
-  .social-media__link:active .social-media__icon {
-    transform: translate(2px, 2px);
-  }
-}
-.social-media__icon {
-  width: 20px;
-  height: 20px;
-  fill: #fff;
-  cursor: pointer;
-  transition: all 0.4s ease-in;
-}
-
-.main-slider__wrapper {
-  display: flex;
-  flex-direction: column;
-}
-.main-slider__slide {
-  height: 100vh;
-}
-
 .header {
   position: fixed;
   z-index: 50;
@@ -861,6 +826,98 @@ body {
   .form__button {
     max-width: 100%;
   }
+}
+
+.footer {
+  padding: 55px 0 17px;
+  background-color: #092930;
+}
+.footer__wrapper {
+  color: #fff;
+}
+@media only screen and (max-width: 767.98px) {
+  .footer__wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+}
+.footer__content {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  margin: 0 0 30px 0;
+}
+@media only screen and (max-width: 767.98px) {
+  .footer__content {
+    flex-direction: column;
+    align-self: stretch;
+  }
+}
+.footer__title {
+  margin: 0 0 40px 0;
+}
+@media only screen and (max-width: 767.98px) {
+  .footer__contacts {
+    margin: 0 0 47px 0;
+  }
+}
+.footer__copy {
+  display: block;
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 12px;
+  color: #fff;
+}
+.footer__media-list {
+  max-width: 100px;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.social-media__link {
+  outline: none;
+  border: 1px solid transparent;
+  transition: all 0.4s ease;
+}
+@media only screen and (min-width: 991.98px) {
+  .social-media__link:focus {
+    border-bottom-color: #fd4e16;
+  }
+  .social-media__link:hover .social-media__icon {
+    fill: #fd4e16;
+  }
+}
+.social-media__icon {
+  width: 27px;
+  height: 27px;
+  fill: #fff;
+  transition: all 0.4s ease;
+}
+.social-media__icon--github {
+  width: 30px;
+  height: 30px;
+}
+
+.contacts-footer {
+  max-width: 300px;
+  width: 100%;
+}
+.contacts-footer__item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 0 10px 0;
+}
+.contacts-footer__name {
+  display: block;
+  font-weight: 500;
+}
+.contacts-footer__value {
+  text-align: right;
+  font-style: normal;
+  display: block;
 }
 
 .popup {
