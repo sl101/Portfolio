@@ -6,31 +6,42 @@ import Swiper, {
 } from 'swiper';
 
 // ========================================================
-// const swiperHero = new Swiper('.swiper-hero',{
+const sliderPorfolio = new Swiper('.slider-portfolio',{
 
-// 	modules: [Navigation, Pagination, EffectFade, Autoplay],
+	// modules: [Navigation, Pagination, EffectFade, Autoplay],
+	modules: [Navigation, Pagination],
 
-// 	wrapperClass: 'swiper-hero__wrapper',
-// 	slideClass: 'swiper-hero__slide',
+	wrapperClass: 'slider-portfolio__wrapper',
+	slideClass: 'slider-portfolio__slide',
 
-// 	pagination: {
-// 		el: '.swiper-hero__pagination',
-// 		clickable: true,
-// 		type: 'bullets',
-// 	},
+		slidesPerView: 1, 
+		spaceBetween: 50,
+		speed: 1200,
+		centeredSlides: true,
 
-// 	speed: 1200,
-// 	loop: true,
+			navigation: {
+		nextEl: '.slider-portfolio__arrow--next',
+		prevEl: '.slider-portfolio__arrow--prev',
+	},
 
-// 	effect: "fade",
-// 	fadeEffect: {
-// 		crossFade: true
-// 	},
-// 	autoplay: {
-// 		delay: 5000,
-// 		disableOnInteraction: false,
-// 	},
-// 	});
+	pagination: {
+		el: '.slider-portfolio__pagination',
+		clickable: true,
+		type: 'bullets',
+	},
+
+
+	// loop: true,
+
+	// effect: "fade",
+	fadeEffect: {
+		// crossFade: true
+	},
+	autoplay: {
+		// delay: 5000,
+		// disableOnInteraction: false,
+	},
+	});
 
 // ====================================================
 

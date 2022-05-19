@@ -1,5 +1,146 @@
 .portfolio {
-	max-width: 100%;
 	min-height: 100vh;
+	padding: 50px 0 50px;
 	background-color: $mainColor;
+
+	// .portfolio__wrapper
+	&__wrapper {
+		width: 100%;
+		color: $white;
+	}
+}
+
+.slider-portfolio {
+	position: relative;
+	overflow: hidden;
+
+	// .slider-portfolio__arrow
+	&__arrow {
+		position: absolute;
+		z-index: 5;
+		top: 50px;
+		left: 50px;
+		width: 40px;
+		height: 40px;
+		outline: none;
+		background-color: $conceptColor;
+		border: 1px solid transparent;
+		border-radius: 100%;
+		transition: all $hoverTime ease;
+
+		&--next {
+			transform: translateX(120%);
+		}
+
+		@include lg-min {
+			&:focus {
+				background-color: $white;
+				& .slider-portfolio__icon {
+					fill: $mainColor;
+				}
+			}
+
+			&:hover {
+				background-color: $white;
+				& .slider-portfolio__icon {
+					fill: $conceptColor;
+				}
+			}
+
+			&:active {
+			}
+		}
+	}
+
+	.swiper-button-disabled {
+		background-color: $conceptColor-disabled;
+	}
+
+	// .slider-portfolio__icon
+	&__icon {
+		position: absolute;
+		z-index: 2;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+		width: 27px;
+		height: 5px;
+		fill: $mainColor;
+		transition: all $hoverTime ease;
+	}
+
+	// .slider-portfolio__wrapper
+	&__wrapper {
+		display: flex;
+	}
+
+	// .slider-portfolio__slide
+	&__slide {
+		flex: 0 0 100%;
+		min-height: 550px;
+		padding: 10px 50px 30px 0;
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+
+		@include xl {
+			flex-direction: column;
+		}
+	}
+
+	// .slider-portfolio__link
+	&__link {
+		display: block;
+		max-width: 760px;
+		outline: none;
+		border: 2px solid transparent;
+		border: 2px solid $white;
+		border-top-left-radius: 25px;
+		border-bottom-right-radius: 25px;
+		transition: all $hoverTime ease-in;
+
+		@include lg-min {
+			&:focus {
+				background-color: $mainColor-01;
+			}
+
+			&:hover {
+				border-color: $conceptColor;
+				background-color: $mainColor;
+			}
+
+			&:hover .slider-portfolio__img {
+				box-shadow: 4px 4px 10px 10px $black-25;
+			}
+
+			&:active {
+			}
+		}
+	}
+
+	// .slider-portfolio__img
+	&__img {
+		min-height: 460px;
+		object-fit: cover;
+		transform: translate(-25px, -25px);
+		border-top-left-radius: 25px;
+		border-bottom-right-radius: 25px;
+		transition: all $hoverTime ease-in;
+	}
+
+	// .slider-portfolio__description
+	&__description {
+		max-width: 300px;
+		padding: 10px 20px;
+		border: 2px solid $conceptColor;
+		border-top-left-radius: 25px;
+		border-bottom-right-radius: 25px;
+		font-size: 16px;
+
+		@include xl {
+			max-width: 100%;
+			margin-bottom: 30px;
+			border: 2px solid transparent;
+		}
+	}
 }
