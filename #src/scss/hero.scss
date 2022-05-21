@@ -1,19 +1,20 @@
 .hero {
 	max-width: 100%;
-	padding: 100px 0 0 0;
-	margin: -75px 0 0 0;
+	padding: 100px 0 50px;
 	background-color: $mainColor;
+
+	@include lg {
+		padding: 80px 0 40px;
+	}
 
 	&__inner {
 		display: flex;
 		justify-content: space-between;
 		align-items: center;
-		min-height: 100vh;
 
 		@include xl {
 			flex-direction: column-reverse;
 			justify-content: center;
-			padding: 110px 0;
 			min-height: 100%;
 		}
 	}
@@ -33,6 +34,10 @@
 
 		@include md {
 			margin-bottom: 50px;
+		}
+
+		@include md {
+			margin: 0;
 		}
 	}
 

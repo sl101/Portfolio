@@ -1,6 +1,6 @@
 .portfolio {
-	min-height: 100vh;
-	padding: 50px 0 50px;
+	min-height: 100%;
+	padding: 60px 0 50px;
 	background-color: $mainColor;
 
 	// .portfolio__wrapper
@@ -32,6 +32,15 @@
 			transform: translateX(120%);
 		}
 
+		@include xl {
+			top: 0;
+			left: 30px;
+		}
+
+		@include lg {
+			display: none;
+		}
+
 		@include lg-min {
 			&:focus {
 				background-color: $white;
@@ -46,14 +55,17 @@
 					fill: $conceptColor;
 				}
 			}
-
-			&:active {
-			}
 		}
 	}
 
 	.swiper-button-disabled {
 		background-color: $conceptColor-disabled;
+		cursor: default;
+		&:hover {
+			& .slider-portfolio__icon {
+				fill: $mainColor;
+			}
+		}
 	}
 
 	// .slider-portfolio__icon
@@ -78,13 +90,16 @@
 	&__slide {
 		flex: 0 0 100%;
 		min-height: 550px;
-		padding: 10px 50px 30px 0;
 		display: flex;
 		align-items: center;
 		justify-content: space-between;
 
 		@include xl {
 			flex-direction: column;
+		}
+
+		@include md {
+			min-height: auto;
 		}
 	}
 
@@ -99,6 +114,10 @@
 		border-bottom-right-radius: 25px;
 		transition: all $hoverTime ease-in;
 
+		@include lg {
+			margin-left: 40px;
+		}
+
 		@include lg-min {
 			&:focus {
 				background-color: $mainColor-01;
@@ -112,9 +131,15 @@
 			&:hover .slider-portfolio__img {
 				box-shadow: 4px 4px 10px 10px $black-25;
 			}
+		}
 
-			&:active {
-			}
+		@include md {
+			max-width: 430px;
+			margin-left: 11px;
+		}
+
+		@include sm {
+			max-width: 250px;
 		}
 	}
 
@@ -126,6 +151,15 @@
 		border-top-left-radius: 25px;
 		border-bottom-right-radius: 25px;
 		transition: all $hoverTime ease-in;
+
+		@include md {
+			min-height: 260px;
+		}
+
+		@include sm {
+			transform: translate(-10px, -10px);
+			min-height: 140px;
+		}
 	}
 
 	// .slider-portfolio__description
@@ -139,8 +173,26 @@
 
 		@include xl {
 			max-width: 100%;
-			margin-bottom: 30px;
+			margin: 0 150px 50px;
 			border: 2px solid transparent;
 		}
+
+		@include lg {
+			margin: 0 100px 50px;
+		}
+
+		@include md {
+			margin: 0 auto 30px;
+			padding: 10px;
+		}
+	}
+
+	// .slider-portfolio__pagination
+	&__pagination {
+		position: absolute;
+		bottom: 0;
+		left: 50%;
+		transform: translateY(-50%);
+		background-color: #fff;
 	}
 }

@@ -1,8 +1,8 @@
 .contacts {
 	position: relative;
 	max-width: 100%;
-	min-height: 100vh;
-	padding: 46px 0 143px;
+	min-height: 100%;
+	padding: 60px 0 50px;
 	@include bg-cover;
 
 	&:before {
