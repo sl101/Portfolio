@@ -739,6 +739,11 @@ body {
   padding: 60px 0 50px;
   background-color: #092930;
 }
+@media only screen and (max-width: 479.98px) {
+  .portfolio {
+    padding-bottom: 40px;
+  }
+}
 .portfolio__wrapper {
   width: 100%;
   color: #fff;
@@ -747,6 +752,12 @@ body {
 .slider-portfolio {
   position: relative;
   overflow: hidden;
+  padding-top: 20px;
+}
+@media only screen and (max-width: 479.98px) {
+  .slider-portfolio {
+    padding: 0;
+  }
 }
 .slider-portfolio__arrow {
   position: absolute;
@@ -809,10 +820,16 @@ body {
 }
 .slider-portfolio__wrapper {
   display: flex;
+  margin-bottom: 13px;
+}
+@media only screen and (max-width: 479.98px) {
+  .slider-portfolio__wrapper {
+    margin-bottom: 30px;
+  }
 }
 .slider-portfolio__slide {
   flex: 0 0 100%;
-  min-height: 550px;
+  min-height: 520px;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -858,11 +875,12 @@ body {
   .slider-portfolio__link {
     max-width: 430px;
     margin-left: 11px;
+    border-color: #fd4e16;
   }
 }
 @media only screen and (max-width: 479.98px) {
   .slider-portfolio__link {
-    max-width: 250px;
+    max-width: 320px;
   }
 }
 .slider-portfolio__img {
@@ -880,8 +898,8 @@ body {
 }
 @media only screen and (max-width: 479.98px) {
   .slider-portfolio__img {
-    transform: translate(-10px, -10px);
-    min-height: 140px;
+    transform: translate(-15px, -15px);
+    min-height: 580px;
   }
 }
 .slider-portfolio__description {
@@ -911,11 +929,26 @@ body {
   }
 }
 .slider-portfolio__pagination {
-  position: absolute;
-  bottom: 0;
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  text-align: center;
   left: 50%;
-  transform: translateY(-50%);
-  background-color: #fff;
+  max-width: 100px;
+  height: 100%;
+  transform: translateX(-50%);
+  background-color: #092930;
+}
+.slider-portfolio .swiper-pagination-bullet {
+  width: 13px;
+  height: 13px;
+  border-radius: 100%;
+  background-color: #7e412d;
+  transition: all 0.4s ease-in;
+}
+.slider-portfolio .swiper-pagination-bullet-active {
+  background-color: #fd4e16;
 }
 
 .contacts {

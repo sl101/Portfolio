@@ -3,6 +3,10 @@
 	padding: 60px 0 50px;
 	background-color: $mainColor;
 
+	@include sm {
+		padding-bottom: 40px;
+	}
+
 	// .portfolio__wrapper
 	&__wrapper {
 		width: 100%;
@@ -13,6 +17,11 @@
 .slider-portfolio {
 	position: relative;
 	overflow: hidden;
+	padding-top: 20px;
+
+	@include sm {
+		padding: 0;
+	}
 
 	// .slider-portfolio__arrow
 	&__arrow {
@@ -84,12 +93,17 @@
 	// .slider-portfolio__wrapper
 	&__wrapper {
 		display: flex;
+		margin-bottom: 13px;
+
+		@include sm {
+			margin-bottom: 30px;
+		}
 	}
 
 	// .slider-portfolio__slide
 	&__slide {
 		flex: 0 0 100%;
-		min-height: 550px;
+		min-height: 520px;
 		display: flex;
 		align-items: center;
 		justify-content: space-between;
@@ -136,10 +150,11 @@
 		@include md {
 			max-width: 430px;
 			margin-left: 11px;
+			border-color: $conceptColor;
 		}
 
 		@include sm {
-			max-width: 250px;
+			max-width: 320px;
 		}
 	}
 
@@ -157,8 +172,8 @@
 		}
 
 		@include sm {
-			transform: translate(-10px, -10px);
-			min-height: 140px;
+			transform: translate(-15px, -15px);
+			min-height: 580px;
 		}
 	}
 
@@ -189,10 +204,27 @@
 
 	// .slider-portfolio__pagination
 	&__pagination {
-		position: absolute;
-		bottom: 0;
+		position: relative;
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		text-align: center;
 		left: 50%;
-		transform: translateY(-50%);
-		background-color: #fff;
+		max-width: 100px;
+		height: 100%;
+		transform: translateX(-50%);
+		background-color: $mainColor;
+	}
+
+	.swiper-pagination-bullet {
+		width: 13px;
+		height: 13px;
+		border-radius: 100%;
+		background-color: $conceptColor-disabled;
+		transition: all $hoverTime ease-in;
+	}
+
+	.swiper-pagination-bullet-active {
+		background-color: $conceptColor;
 	}
 }
