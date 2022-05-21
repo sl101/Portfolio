@@ -98,6 +98,10 @@
 			height: 120px;
 			font-size: 18px;
 		}
+
+		&:active {
+			background-color: $conceptColor-disabled;
+		}
 	}
 
 	&__person {

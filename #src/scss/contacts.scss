@@ -115,5 +115,9 @@
 		@include sm {
 			max-width: 100%;
 		}
+
+		&:active {
+			background-color: $mainColor;
+		}
 	}
 }
