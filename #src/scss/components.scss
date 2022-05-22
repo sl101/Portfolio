@@ -32,32 +32,35 @@
 
 // ==========================================
 .btn {
+	position: relative;
+	top: 0;
 	font-family: Roboto;
-	border-radius: 10px;
-	border-width: 1px;
-	border-style: solid;
+	border: 0 solid transparent;
+	font-weight: 500;
 	font-size: 24px;
-	padding: 9px 20px;
-	outline: none;
-	color: inherit;
 	letter-spacing: 0.6px;
-	background-color: transparent;
-	transition: all $hoverTime ease-in;
+	outline: none;
+	color: $white;
+	color: $mainColor;
+	background-color: $conceptColor;
+	box-shadow: 4px 4px 10px $black;
+	transition: background-color $hoverTime ease-in, color $hoverTime ease-in;
 
 	@include lg-min {
 		&:focus {
-			background-color: $background-color;
+			background-color: $conceptHover;
+			color: $white;
 		}
 
 		&:hover {
-			color: $conceptColor;
-			border-color: $white;
-			background-color: $white;
+			color: $white;
 		}
+	}
 
-		&:active {
-			transform: translate(2px, 2px);
-		}
+	&:active {
+		top: 2px;
+		box-shadow: 0 0 0 transparent;
+		background-color: $conceptColor;
 	}
 
 	&--white {

@@ -87,20 +87,12 @@
 		height: 150px;
 		flex: 0 0 150px;
 		border-radius: 100%;
-		border: 0;
-		font-size: 24px;
-		font-weight: 700;
-		background-color: $conceptColor;
 
 		@include md {
 			flex: 0 0 120px;
 			width: 120px;
 			height: 120px;
 			font-size: 18px;
-		}
-
-		&:active {
-			background-color: $conceptColor-disabled;
 		}
 	}
 

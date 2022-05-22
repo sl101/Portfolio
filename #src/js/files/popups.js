@@ -56,15 +56,10 @@ function popupClose(popupActive, doUnlock = true) {
 
 function bodyLock() {
 	const lockPaddingValue = window.innerWidth - document.querySelector('.body').offsetWidth + 'px';
-	// console. log('lockPaddingValue: '+ lockPaddingValue);
-	// console. log('header paddingRight: '+ header.style.paddingRight);
-	// lockHeader.style.paddingRight = lockPaddingValue;
 	
 	if (lockPadding.length > 0) {
 		for (let index = 0; index < lockPadding.length; index++) {
 			const el = lockPadding[index];
-			// lockMenu.style.paddingRight = lockPaddingValue;
-			// console.log('lockPadding.length: '+ lockPadding.length);
 			el.style.paddingRight = lockPaddingValue;
 		}
 	}
