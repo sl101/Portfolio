@@ -16,14 +16,14 @@ async function formSend(e){
 		contacts.classList.add('_sending');
 		let response = await fetch('sendmail.php', {
 			method: 'POST',
-			body: formData
+			body: formData,
 		});
 		if(response.ok){
 			let result = await response.json();
 			alert(result.message);
 			formPreview.innerHTML = '';
-			form.reset();
 			contacts.classList.remove('_sending');
+			form.reset();
 		} else {
 			alert('Error');
 			contacts.classList.remove('_sending');
